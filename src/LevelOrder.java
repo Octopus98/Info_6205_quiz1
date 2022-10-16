@@ -11,11 +11,11 @@ public class LevelOrder {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
 
-        int curL = 0;
+        int cur = 0;
         while(!queue.isEmpty()){
             List<Integer> levelRs = new ArrayList<Integer>();
-            curL = queue.size();
-            for(int i=0;i<curL;i++){
+            cur = queue.size();
+            for(int i=0; i<cur; i++){
                 TreeNode peek = queue.poll();
                 levelRs.add(peek.val);
                 if(peek.left!=null){
